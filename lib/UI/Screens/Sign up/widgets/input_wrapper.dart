@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:movieapp/UI/Screens/Sign%20up/controller/sign_up_controller.dart';
 import 'package:movieapp/Widgets/custom_elevated_button_widget.dart';
-import '../../../../Widgets/custom_button_widget.dart';
 import 'Input_field.dart';
 import 'button.dart';
 

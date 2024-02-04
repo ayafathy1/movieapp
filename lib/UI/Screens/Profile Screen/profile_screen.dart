@@ -1,7 +1,9 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 import 'package:movieapp/UI/Screens/Edit%20Profile/edit_profile.dart';
+import 'package:movieapp/UI/Screens/Login%20Screen/login_screen.dart';
 import 'package:movieapp/UI/Screens/Welcome%20Screen/welcome_screen.dart';
 
 class ProfileScreen extends StatelessWidget {
@@ -56,7 +58,8 @@ class ProfileScreen extends StatelessWidget {
                   Icon(Icons.logout,color: Colors.red,size: 30,),
                   SizedBox(width: 15,),
                   TextButton(onPressed: () {
-                    Get.to(WelcomeScreen());
+                    logOut();
+                    //Get.to(WelcomeScreen());
                   },
                     child: Text('Logout',style: TextStyle(color: Colors.red,fontSize: 22)),),
 
@@ -95,4 +98,10 @@ class ProfileScreen extends StatelessWidget {
             ),
         );
     }
+}
+
+ Future<void> logOut() async{
+ await FirebaseAuth.instance.signOut().then((value) {
+    Get.offAll(() =>  LoginScreen());
+  });
 }
