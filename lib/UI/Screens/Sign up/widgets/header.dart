@@ -1,8 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import '../sign_up.dart';
-
 class Header extends StatelessWidget{
   @override
   Widget build(BuildContext context) {

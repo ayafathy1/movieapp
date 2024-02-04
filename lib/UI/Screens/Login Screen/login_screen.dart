@@ -54,8 +54,7 @@ class _LoginScreenState extends State<LoginScreen> {
                        ),
                        child: Form(
                          key: controller.formkey,
-                         child:
-                       Column(
+                         child: Column(
                          children: [
                            SizedBox(height: 40,),
                            Row(
@@ -64,7 +63,14 @@ class _LoginScreenState extends State<LoginScreen> {
                              ],
                            ),
                            CustomTextFormFieldWidget
-                             (Controller: controller.emailaddressController, validator: controller.emailValidator, keyboardType: TextInputType.emailAddress, textfieldHint: "Enter Your Email", ispasswordField: false, obscureText: false, SuffixColor: Colors.transparent,FillColor: Colors.white38,),
+                             (Controller: controller.emailaddressController,
+                             validator: controller.emailValidator,
+                             keyboardType: TextInputType.emailAddress,
+                             textfieldHint: "Enter Your Email",
+                             ispasswordField: false,
+                             obscureText: false,
+                             SuffixColor: Colors.transparent,
+                             FillColor: Colors.white38,),
 
                            Row(
                              children: [
@@ -72,12 +78,18 @@ class _LoginScreenState extends State<LoginScreen> {
                              ],
                            ),
 
-                          CustomTextFormFieldWidget(Controller: controller.passwordController, validator: controller.passwordValidator, keyboardType: TextInputType.visiblePassword, textfieldHint: "Enter Your Password", ispasswordField: true, obscureText: true , SuffixColor: Colors.transparent, FillColor: Colors.white38,),
+                          CustomTextFormFieldWidget(Controller: controller.passwordController, validator: controller.passwordValidator, keyboardType: TextInputType.visiblePassword,
+                            textfieldHint: "Enter Your Password",
+                            ispasswordField: true,
+                            obscureText: true ,
+                            SuffixColor: Colors.transparent,
+                            FillColor: Colors.white38,),
                            Row(children: [
                              SizedBox(width: 250,),
                              TextButton(onPressed: (){
                                Get.to(ForgotPassScreen());
-                             }, child: Text("Forgot Password", style: TextStyle(color: Color(0xff666666)),)),
+                             }, child: Text("Forgot Password",
+                               style: TextStyle(color: Color(0xff666666)),)),
                            ],),
 
                            CustomElevatedButtonWidget(text: "Sign In", textColor: Colors.white, onPressed: (){

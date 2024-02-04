@@ -1,4 +1,4 @@
-import 'package:firebase_auth/firebase_auth.dart';
+ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 import 'package:movieapp/Models/profile_model.dart';
@@ -31,7 +31,6 @@ class EditProfileController extends GetxController{
     update();
   }
 
-
   saveProfileData() async {
     await EditProfileServies().saveToDo(ProfileModel(
         FullName:fullnameController.text ,
@@ -47,8 +46,6 @@ class EditProfileController extends GetxController{
    //  Get.off(EditProfile());
    // Get.to(EditProfile());
   }
-
-
 
   String? usernameValidator (String? username){
     if (RegExp(

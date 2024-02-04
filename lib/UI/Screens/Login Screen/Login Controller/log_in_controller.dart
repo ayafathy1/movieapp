@@ -10,12 +10,8 @@ import '../../../../Services/user authentication/auth implementation/auth_servic
 
 
 class LogInController extends GetxController{
-
-
   final  formkey =  GlobalKey<FormState>();
   final FirebaseAuthService _auth = FirebaseAuthService();
-
-
   final emailaddressController =  TextEditingController();
   final passwordController =  TextEditingController();
 

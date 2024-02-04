@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:movieapp/UI/Screens/Sign%20up/controller/sign_up_controller.dart';
 import 'package:movieapp/Widgets/custom_elevated_button_widget.dart';
+import '../../Profile Screen/profile_screen.dart';
 import 'Input_field.dart';
-import 'button.dart';
 
 class InputWrapper extends StatelessWidget {
   @override
@@ -17,7 +17,7 @@ class InputWrapper extends StatelessWidget {
           child: SingleChildScrollView(
           child: Column(
           children: <Widget>[
-          SizedBox(height: 10,),
+          SizedBox(height: 5,),
     Container(
 
     decoration: BoxDecoration(
@@ -27,12 +27,12 @@ class InputWrapper extends StatelessWidget {
     child: InputField(),
     ),
     SizedBox(height: 5,),
-    CustomElevatedButtonWidget(text: "Sign Up", textColor: Colors.black, onPressed:(){
+
+     CustomElevatedButtonWidget(text: "Sign Up", textColor: Colors.black,
+       onPressed:(){Get.to(ProfileScreen());
     if (controller.formkey.currentState!.validate()) {
     controller.signUp();
     };},
-
-
 
     ),
             Center(

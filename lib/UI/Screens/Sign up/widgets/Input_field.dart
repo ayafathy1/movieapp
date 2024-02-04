@@ -1,70 +1,116 @@
 import 'package:flutter/material.dart';
-import 'package:movieapp/UI/Screens/Sign%20up/widgets/textform1.dart';
-import 'package:movieapp/UI/Screens/Sign%20up/widgets/textform2.dart';
-import 'package:movieapp/UI/Screens/Sign%20up/widgets/textform3.dart';
-import 'package:movieapp/UI/Screens/Sign%20up/widgets/textform4.dart';
-import 'TextFormFeild.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:get/get_state_manager/src/simple/get_state.dart';
+import '../../../../Widgets/custom_text_form_field_widget.dart';
+import '../controller/sign_up_controller.dart';
+
 
 class InputField extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-        child: Column(
-            children: <Widget>[
-              Container(
-                child: Padding(
-                  padding: const EdgeInsets.only(left: 10, top: 1,right: 300),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        'Name',
-                        style:
-                        TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
+    return GetBuilder(
+        init: SignUpController(),
+    builder: (SignUpController controller) {
+      return SingleChildScrollView(
+          child: Form(
+            key: controller.formkey,
+            child: Column(
+                children: <Widget>[
+                  Container(
+                    child: Padding(
+                      padding: const EdgeInsets.only(
+                          left: 10, top: 1, right: 300),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Name',
+                            style:
+                            TextStyle(
+                                fontWeight: FontWeight.bold, fontSize: 15),
+                          ),
+                        ],
                       ),
-                    ],
+                    ),
+                    padding: EdgeInsets.all(1),
+                    decoration: BoxDecoration(
+                        border: Border(
+                            bottom: BorderSide(color: Colors.white)
+                        )
+                    ),
                   ),
-                ),
-                padding: EdgeInsets.all(1),
-                decoration: BoxDecoration(
-                    border: Border(
-                        bottom: BorderSide(color: Colors.white)
-                    )
-                ),
-              ),
-              SizedBox(height: 1,),
-              TextForm4(),
-              Text(
-                'Email                                                                        ',
-                style:
-                TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
-              ),
-              SizedBox(height: 1,),
-              TextFormFeild(),
-              Text(
-                'phone no                                                                  ',
-                style:
-                TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
-              ),
-              SizedBox(height: 1,),
-              TextForm1(),
-              Text(
-                'password                                                                 ',
-                style:
-                TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
-              ),
-              SizedBox(height: 1,),
-              TextForm2(),
-              Text(
-                '    confirm password                                                                 ',
-                style:
-                TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
-              ),
-              SizedBox(height: 1,),
-              TextForm3(),
-            ],
+                  CustomTextFormFieldWidget
+                    (Controller: controller.usernameController,
+                    validator: controller.usernameValidator,
+                    keyboardType: TextInputType.name,
+                    textfieldHint: "Enter Your full name",
+                    ispasswordField: false,
+                    obscureText: false,
+                    SuffixColor: Colors.transparent,
+                    FillColor: Colors.white38,),
+                  Text(
+                    'Email                                                                        ',
+                    style:
+                    TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
+                  ),
+
+                  CustomTextFormFieldWidget
+                    (Controller: controller.emailaddressController,
+                    validator: controller.emailValidator,
+                    keyboardType: TextInputType.emailAddress,
+                    textfieldHint: "Enter Your Email",
+                    ispasswordField: false,
+                    obscureText: false,
+                    SuffixColor: Colors.transparent,
+                    FillColor: Colors.white38,),
+                  Text(
+                    'phone no                                                                  ',
+                    style:
+                    TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
+                  ),
+                  CustomTextFormFieldWidget(
+                    Controller: controller.phoneController,
+                    validator: controller.phoneValidator,
+                    keyboardType: TextInputType.phone,
+                    textfieldHint: "Enter Your phone number",
+                    ispasswordField: false,
+                    obscureText: false,
+                    SuffixColor: Colors.transparent,
+                    FillColor: Colors.white38,),
+
+                  Text(
+                    'password                                                                 ',
+                    style:
+                    TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
+                  ),
+                  CustomTextFormFieldWidget(
+                    Controller: controller.passwordController,
+                    validator: controller.passwordValidator,
+                    keyboardType: TextInputType.visiblePassword,
+                    textfieldHint: "Enter Your Password",
+                    ispasswordField: true,
+                    obscureText: true,
+                    SuffixColor: Colors.transparent,
+                    FillColor: Colors.white38,),
+
+                  Text(
+                    '    confirm password                                                                 ',
+                    style:
+                    TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
+                  ),
+                  CustomTextFormFieldWidget(
+                    Controller: controller.confirmpasswordController,
+                    validator: controller.confirmpasswordValidator,
+                    keyboardType: TextInputType.visiblePassword,
+                    textfieldHint: "Enter Your Password",
+                    ispasswordField: true,
+                    obscureText: true,
+                    SuffixColor: Colors.transparent,
+                    FillColor: Colors.white38,),
+                ]
             ),
-        );
+          ));
+    });
     }
-}
+  }
