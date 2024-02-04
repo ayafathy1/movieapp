@@ -54,7 +54,7 @@ class Trending extends StatelessWidget {
                   }, icon: Icon(Icons.arrow_back), color: Color(0xff0A0A0A),),
                   Text("Top Rated", style: TextStyle(color: Color(0xff0A0A0A),
                       fontWeight: FontWeight.w400,
-                      fontSize: 24),),
+                      fontSize: 20),),
                   SizedBox(width: 180,),
                   IconButton(onPressed: () {},
                       icon: Image(
