@@ -1,11 +1,16 @@
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
-import 'package:movieapp/UI/Screens/Trending/widget/box_widget.dart';
+import 'package:movieapp/UI/Screens/home%20screen/home%20screen/home_screen.dart';
+import 'package:movieapp/Widgets/box_widget.dart';
 
 
-class Trending extends StatelessWidget{
+
+
+
+class MovieScreen extends StatelessWidget{
+  const MovieScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
 
@@ -14,7 +19,7 @@ class Trending extends StatelessWidget{
         "title" : "   Madaari",
         "date": "   2018",
         "genere" :"Genere:Drama,Thriller,Action",
-        "image" : "assets/images/Madaari Movie Review 1.png"
+        "image" : "assets/images/Madaari Movie Review 1 (1).png"
       },
 
       {
@@ -34,7 +39,8 @@ class Trending extends StatelessWidget{
       {
         "title" :" Openhimmer",
         "date": "2023",
-        "genere":"Genere:History,Drama,Biography",
+        "genere":"Genere:History,Drama,"
+            "Biography",
         "image" : "assets/images/oppenhimer.png"
       },
 
@@ -53,9 +59,9 @@ class Trending extends StatelessWidget{
               Row(
                 children: [
                   IconButton(onPressed: (){
-                    // Get.to(WelcomeScreen());
+                    Get.to(HomeScreen());
                   }, icon: Icon(Icons.arrow_back) ,color: Color(0xff0A0A0A),),
-                  Text("Trending" , style: TextStyle(color: Color(0xff0A0A0A) , fontWeight: FontWeight.w400 , fontSize: 20) ,),
+                  Text("Movie" , style: TextStyle(color: Color(0xff0A0A0A) , fontWeight: FontWeight.w400 , fontSize: 20) ,),
                   SizedBox(width: 180,),
                   IconButton(onPressed: (){}, icon:Image(image: AssetImage('assets/images/searchIcon.png'))),
                 ],

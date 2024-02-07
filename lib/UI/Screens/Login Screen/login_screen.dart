@@ -1,8 +1,6 @@
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
-import 'package:get/get_navigation/get_navigation.dart';
 import 'package:movieapp/UI/Screens/Forgot%20Password/forgot_password.dart';
 import 'package:movieapp/UI/Screens/Login%20Screen/Login%20Controller/log_in_controller.dart';
 import 'package:movieapp/UI/Screens/Sign%20up/sign_up.dart';

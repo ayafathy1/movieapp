@@ -4,6 +4,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 import 'package:movieapp/UI/Screens/Profile%20Screen/profile_screen.dart';
+import 'package:movieapp/UI/Screens/home%20screen/home%20screen/home_screen.dart';
 import '../../../../Services/user authentication/auth implementation/auth_services.dart';
 
 class SignUpController extends GetxController {
@@ -105,7 +106,7 @@ class SignUpController extends GetxController {
     if (user!= null){
       print(" User is Successfully created ");
 
-      Get.to(ProfileScreen(
+      Get.to(HomeScreen(
         // emailaddress: email, password: password
       ));
 

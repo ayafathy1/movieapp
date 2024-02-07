@@ -5,6 +5,7 @@ import 'package:get/get_navigation/get_navigation.dart';
 import 'package:movieapp/UI/Screens/Edit%20Profile/edit_profile.dart';
 import 'package:movieapp/UI/Screens/Login%20Screen/login_screen.dart';
 import 'package:movieapp/UI/Screens/Welcome%20Screen/welcome_screen.dart';
+import 'package:movieapp/UI/Screens/home%20screen/home%20screen/home_screen.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
@@ -68,7 +69,9 @@ class ProfileScreen extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    IconButton( onPressed: () {  }, icon: Icon(Icons.home_outlined,
+                    IconButton( onPressed: () {
+                      Get.to(()=>HomeScreen());
+                    }, icon: Icon(Icons.home_outlined,
                       color: Colors.grey.shade700,size: 30,)),
                     IconButton( onPressed: () {  }, icon: Icon(Icons.search,
                       color: Colors.grey.shade700,size: 30,)),
