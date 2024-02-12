@@ -43,17 +43,15 @@ class _HomeScreenState extends State<HomeScreen> {
                   Align(
                     child: Container(
                       alignment: Alignment.topLeft,
-                      decoration: const BoxDecoration(
-                          image: DecorationImage(
-                              image: AssetImage('assets/images/Group 5.png'))),
+                      child: IconButton(onPressed: (){},
+                          icon:Image(image: AssetImage('assets/images/Group 5.png'))),
                     ),
                   ),
                   Align(
                     child: Container(
                       alignment: Alignment.topRight,
-                      decoration: const BoxDecoration(
-                          image: DecorationImage(
-                              image: AssetImage('assets/images/Vector.png'))),
+                      child: IconButton(onPressed: (){},
+                          icon:Image(image: AssetImage('assets/images/Vector.png'))),
                     ),
                   ),
                 ],

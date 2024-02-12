@@ -33,7 +33,8 @@ class _LoginScreenState extends State<LoginScreen> {
                      children: [
                        IconButton(onPressed: (){
                          Get.to(WelcomeScreen());
-                       }, icon: Icon(Icons.arrow_back_outlined) ,color: Color(0xff0A0A0A),),
+                       },
+                         icon: Icon(Icons.arrow_back_outlined) ,color: Color(0xff0A0A0A),),
                      ],
                    ),
                    Image(image: AssetImage('assets/images/mylogo.png'),),
@@ -126,8 +127,6 @@ class _LoginScreenState extends State<LoginScreen> {
 
      }
      );
-
-
 
   }
 }
