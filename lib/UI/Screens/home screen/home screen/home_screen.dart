@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:loading_animation_widget/loading_animation_widget.dart';
 import 'package:movieapp/UI/Screens/Profile%20Screen/profile_screen.dart';
 import 'package:movieapp/UI/Screens/home%20screen/home%20screen%20controller/home_screen_controller.dart';
 import 'package:movieapp/UI/Screens/home%20screen/widget/box_image.dart';
@@ -29,7 +30,14 @@ class _HomeScreenState extends State<HomeScreen> {
     {
       return Scaffold(
         backgroundColor: Colors.white,
-        body: SingleChildScrollView(
+        body: controller.isLoading ? Center(
+          child: LoadingAnimationWidget.twistingDots(
+            leftDotColor: Colors.brown,
+            rightDotColor: Colors.black,
+            size: 200,
+          ),
+        ) :
+        SingleChildScrollView(
           child: Column(mainAxisAlignment: MainAxisAlignment.start, children: [
             Container(
               width: Get.width,

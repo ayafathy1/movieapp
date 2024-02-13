@@ -1,5 +1,4 @@
 import 'package:get/get_state_manager/src/simple/get_controllers.dart';
-
 import '../../../../Models/movie_data_model.dart';
 import '../../../../Services/movie_services/movie_services.dart';
 
@@ -7,6 +6,11 @@ import '../../../../Services/movie_services/movie_services.dart';
 class MoviesController extends GetxController{
 
    MovieDataModel? data ;
+   bool isLoading = true;
+   onInit()  {
+     super.onInit();
+     getdata();
+   }
   void getdata() async
   {
      data = await MovieServices.getMovieData();
@@ -15,5 +19,7 @@ class MoviesController extends GetxController{
       print("some error occured");
     }else{
       print(data?.results?[0]);
-    }
+
+    }isLoading= false;
+     update();
     }}

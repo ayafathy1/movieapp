@@ -7,13 +7,23 @@ import 'package:movieapp/Services/tv_services/tv_services.dart';
 
 
 class HomeScreenController extends GetxController{
+   TvDataModel? data ;
+  bool isLoading = true;
+  @override
+  onInit()  {
+    super.onInit();
+    MovieData();
+    TvData();
+  }
   void MovieData() async{
+
     MovieDataModel? data = await MovieServices.getMovieData();
     if (data== null){
       print("Error has been happen");
     }else{
-      print(data.results?[0].originalTitle.toString());
-    }
+      print(data?.results?[0]);
+    }isLoading= false;
+    update();
   }
 
   void TvData() async{
@@ -21,7 +31,7 @@ class HomeScreenController extends GetxController{
     if (data== null){
       print("Error has been happen");
     }else{
-      print(data.results?[0].originalName.toString());
+      print(data?.results?[0]);
     }
   }
 

@@ -33,7 +33,7 @@ class Box2 extends StatelessWidget{
                         height: 190,
                         width: 100,
                         image:
-                        AssetImage("https://api.themoviedb.org/3/tv/series_id/season/season_number/images${controller.data?.results?[index].posterPath??""}"),
+                        NetworkImage("https://api.themoviedb.org/3/tv/series_id/season/season_number/images${controller.data?.results?[index].posterPath??""}"),
                         fit: BoxFit.cover,),
                     ),
                     Column(

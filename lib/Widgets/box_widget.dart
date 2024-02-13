@@ -34,7 +34,7 @@ class Box extends StatelessWidget{
                         height: 190,
                         width: 100,
                         image:
-                        AssetImage("https://api.themoviedb.org/3/movie/movie_id/images${controller.data?.results?[index].posterPath??""}"),
+                        NetworkImage("https://api.themoviedb.org/3/movie/movie_id/images${controller.data?.results?[index].posterPath??""}"),
                         fit: BoxFit.cover,),
                     ),
                     Column(
