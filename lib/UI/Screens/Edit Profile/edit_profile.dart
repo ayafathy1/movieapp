@@ -32,7 +32,7 @@ class EditProfile extends StatelessWidget{
       Row(
       children: [
       IconButton(onPressed: (){
-      Get.to(WelcomeScreen());
+      Get.to(ProfileScreen());
       }, icon: Icon(Icons.arrow_back) ,color: Color(0xff0A0A0A),),
       Text("Edit Profile" , style: TextStyle(color: Color(0xff0A0A0A) , fontWeight: FontWeight.w400 , fontSize: 20) ,),
     ],
