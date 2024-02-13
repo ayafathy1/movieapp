@@ -6,14 +6,14 @@ import '../../../../Services/tv_services/tv_services.dart';
 
 class TvController extends GetxController{
 
-  late TvDataModel data ;
+   TvDataModel? data ;
   void getdata() async
   {
-    TvDataModel? data = await TvServices.getTvData();
+     data = await TvServices.getTvData();
     if(data == null)
     {
       print("some error occured");
     }else{
-      print(data.results?[0]);
+      print(data?.results?[0]);
     }
   }}

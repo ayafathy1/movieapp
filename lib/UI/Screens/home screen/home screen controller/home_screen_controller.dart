@@ -24,5 +24,6 @@ class HomeScreenController extends GetxController{
       print(data.results?[0].originalName.toString());
     }
   }
+
 }
 

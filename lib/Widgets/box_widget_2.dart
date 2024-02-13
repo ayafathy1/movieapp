@@ -1,11 +1,10 @@
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:movieapp/UI/Screens/movie_screen/controller/movie_controller.dart';
 
 
-class Box extends StatelessWidget{
-  Box( {super.key, Key?Key , required this.listview , required this.index});
+class Box2 extends StatelessWidget{
+  Box2( {super.key, Key?Key , required this.listview , required this.index});
   int index;
   var listview;
   @override
@@ -14,7 +13,7 @@ class Box extends StatelessWidget{
         init: MoviesController(),
         builder: (MoviesController controller){
 
-        return  Padding(
+          return  Padding(
             padding: const EdgeInsets.all(20),
             child: Container(
               decoration: BoxDecoration(
@@ -34,7 +33,7 @@ class Box extends StatelessWidget{
                         height: 190,
                         width: 100,
                         image:
-                        AssetImage("https://api.themoviedb.org/3/movie/movie_id/images${controller.data?.results?[index].posterPath??""}"),
+                        AssetImage("https://api.themoviedb.org/3/tv/series_id/season/season_number/images${controller.data?.results?[index].posterPath??""}"),
                         fit: BoxFit.cover,),
                     ),
                     Column(

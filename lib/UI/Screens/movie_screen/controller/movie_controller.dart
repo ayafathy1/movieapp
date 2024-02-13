@@ -6,14 +6,14 @@ import '../../../../Services/movie_services/movie_services.dart';
 
 class MoviesController extends GetxController{
 
-  late MovieDataModel data ;
+   MovieDataModel? data ;
   void getdata() async
   {
-    MovieDataModel? data = await MovieServices.getMovieData();
+     data = await MovieServices.getMovieData();
     if(data == null)
     {
       print("some error occured");
     }else{
-      print(data.results?[0]);
+      print(data?.results?[0]);
     }
     }}

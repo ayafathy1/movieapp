@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:movieapp/UI/Screens/home%20screen/home%20screen/home_screen.dart';
 import 'package:movieapp/Widgets/box_widget.dart';
+import 'package:movieapp/Widgets/box_widget_2.dart';
 
 
 
@@ -73,7 +74,7 @@ class TvScreen extends StatelessWidget {
                     child: ListView.builder(
                         itemCount: listview.length,
                         itemBuilder: (_, index) {
-                          return Box(listview: listview, index: index,);
+                          return Box2(listview: listview, index: index,);
                         }
                     ),
                   ),

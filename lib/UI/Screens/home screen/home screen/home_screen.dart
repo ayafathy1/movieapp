@@ -69,6 +69,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   InkWell(
                       onTap: () {
 
+
                         Get.to(() => const MovieScreen());
                       },
                       child: Text(
