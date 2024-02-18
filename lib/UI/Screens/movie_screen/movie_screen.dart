@@ -1,4 +1,6 @@
 
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
@@ -84,6 +86,7 @@ class MovieScreen extends StatelessWidget{
                       ],
                     ),
                     Center(
+                      // ignore: sized_box_for_whitespace
                       child: Container(
                         height: 900,
                         child: Padding(

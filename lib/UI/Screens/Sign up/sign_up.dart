@@ -1,10 +1,12 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:movieapp/UI/Screens/Sign%20up/widgets/header.dart';
 import 'package:movieapp/UI/Screens/Sign%20up/widgets/input_wrapper.dart';
 
 
+// ignore: use_key_in_widget_constructors
 class Signup extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

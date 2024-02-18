@@ -1,3 +1,5 @@
+// ignore_for_file: body_might_complete_normally_nullable, avoid_print
+
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -70,6 +72,7 @@ class LogInController extends GetxController{
     if (user!= null){
 
 
+      // ignore: prefer_const_constructors
       Get.to(HomeScreen(
         //  emailaddress: email, password: password
       ));

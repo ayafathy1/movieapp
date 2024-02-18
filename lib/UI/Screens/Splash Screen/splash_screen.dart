@@ -1,10 +1,13 @@
-import 'package:flutter/cupertino.dart';
+
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
-import 'package:splash_view/source/presentation/pages/pages.dart';
+
 import 'package:splash_view/source/presentation/presentation.dart';
 
 import '../Welcome Screen/welcome_screen.dart';
 
+// ignore: use_key_in_widget_constructors
 class SplashScreen extends StatelessWidget{
   @override
   Widget build(BuildContext context) {

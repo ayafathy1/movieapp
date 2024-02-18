@@ -1,10 +1,10 @@
- import 'package:firebase_auth/firebase_auth.dart';
+
+// ignore_for_file: body_might_complete_normally_nullable, avoid_print
+
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 import 'package:movieapp/Models/profile_model.dart';
 import 'package:movieapp/Services/Edit%20Profile/edit_profile_services.dart';
-import 'package:movieapp/UI/Screens/Edit%20Profile/edit_profile.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 class EditProfileController extends GetxController{
 

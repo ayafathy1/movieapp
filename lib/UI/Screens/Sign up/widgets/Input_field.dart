@@ -1,10 +1,13 @@
+
+// ignore_for_file: file_names, prefer_const_constructors
+
 import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:get/get_state_manager/src/simple/get_state.dart';
 import '../../../../Widgets/custom_text_form_field_widget.dart';
 import '../controller/sign_up_controller.dart';
 
 
+// ignore: use_key_in_widget_constructors
 class InputField extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
@@ -17,12 +20,14 @@ class InputField extends StatelessWidget{
             child: Column(
                 children: <Widget>[
                   Container(
+                    // ignore: sort_child_properties_last
                     child: Padding(
                       padding: const EdgeInsets.only(
                           left: 10, top: 1, right: 300),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         crossAxisAlignment: CrossAxisAlignment.start,
+                        // ignore: prefer_const_literals_to_create_immutables
                         children: [
                           Text(
                             'Name',

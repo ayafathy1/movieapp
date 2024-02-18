@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print
+
 import 'package:get/get.dart';
 import 'package:movieapp/Models/movie_data_model.dart';
 import 'package:movieapp/Models/tv_data_model.dart';
@@ -15,6 +17,7 @@ class HomeScreenController extends GetxController{
     MovieData();
     TvData();
   }
+  // ignore: non_constant_identifier_names
   void MovieData() async{
 
     MovieDataModel? data = await MovieServices.getMovieData();
@@ -26,6 +29,7 @@ class HomeScreenController extends GetxController{
     update();
   }
 
+  // ignore: non_constant_identifier_names
   void TvData() async{
     TvDataModel? data = await TvServices.getTvData();
     if (data== null){

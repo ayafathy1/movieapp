@@ -1,4 +1,6 @@
 
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:movieapp/UI/Screens/Forgot%20Password/forgot_password.dart';
@@ -8,6 +10,7 @@ import 'package:movieapp/UI/Screens/Welcome%20Screen/welcome_screen.dart';
 import 'package:movieapp/Widgets/custom_elevated_button_widget.dart';
 import 'package:movieapp/Widgets/custom_text_form_field_widget.dart';
 
+// ignore: use_key_in_widget_constructors
 class LoginScreen extends StatefulWidget{
   @override
   State<LoginScreen> createState() => _LoginScreenState();
@@ -57,6 +60,7 @@ class _LoginScreenState extends State<LoginScreen> {
                          children: [
                            SizedBox(height: 40,),
                            Row(
+                             // ignore: prefer_const_literals_to_create_immutables
                              children: [
                                Text("          Email"),
                              ],
@@ -72,6 +76,7 @@ class _LoginScreenState extends State<LoginScreen> {
                              FillColor: Colors.white38,),
 
                            Row(
+                             // ignore: prefer_const_literals_to_create_immutables
                              children: [
                                Text("          Password"),
                              ],

@@ -1,16 +1,21 @@
-import 'package:flutter/cupertino.dart';
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 
 class CustomTextFormFieldWidget extends StatelessWidget{
+  // ignore: non_constant_identifier_names
   const CustomTextFormFieldWidget({Key? key, required this.Controller, required this.validator, required this.keyboardType, required this.textfieldHint, required this.ispasswordField, required this.obscureText, required this.SuffixColor, required this.FillColor}) : super (key: key);
 
+  // ignore: non_constant_identifier_names
   final TextEditingController Controller;
   final String? Function(String?) validator ;
   final TextInputType keyboardType ;
   final String textfieldHint;
   final bool ispasswordField;
   final bool obscureText ;
+  // ignore: non_constant_identifier_names
   final Color SuffixColor;
+  // ignore: non_constant_identifier_names
   final Color FillColor;
   @override
   Widget build(BuildContext context) {

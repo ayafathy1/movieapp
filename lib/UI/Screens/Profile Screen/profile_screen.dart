@@ -1,10 +1,12 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 import 'package:movieapp/UI/Screens/Edit%20Profile/edit_profile.dart';
 import 'package:movieapp/UI/Screens/Login%20Screen/login_screen.dart';
-import 'package:movieapp/UI/Screens/Welcome%20Screen/welcome_screen.dart';
+
 import 'package:movieapp/UI/Screens/home%20screen/home%20screen/home_screen.dart';
 
 class ProfileScreen extends StatelessWidget {
@@ -22,6 +24,7 @@ class ProfileScreen extends StatelessWidget {
                 Row(
                   children: [
                     Image.asset('assets/images/Group 5 (1).png'),
+
                     SizedBox(width: 15,),
                     Text('Profile',style: TextStyle(color: Colors.grey.shade700,fontSize: 25,
                         fontWeight: FontWeight.w500),)

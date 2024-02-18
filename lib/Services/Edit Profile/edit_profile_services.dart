@@ -1,7 +1,9 @@
+// ignore_for_file: avoid_print
+
 import 'package:movieapp/Models/profile_model.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:firebase_database/firebase_database.dart';
-import 'package:http/http.dart' as http;
+
 
 class EditProfileServies{
 

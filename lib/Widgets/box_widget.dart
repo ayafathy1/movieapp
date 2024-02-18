@@ -4,9 +4,12 @@ import 'package:get/get.dart';
 import 'package:movieapp/UI/Screens/movie_screen/controller/movie_controller.dart';
 
 
+// ignore: must_be_immutable
 class Box extends StatelessWidget{
+  // ignore: non_constant_identifier_names
   Box( {super.key, Key?Key , required this.listview , required this.index});
   int index;
+  // ignore: prefer_typing_uninitialized_variables
   var listview;
   @override
   Widget build(BuildContext context) {

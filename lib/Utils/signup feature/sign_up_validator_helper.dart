@@ -1,3 +1,5 @@
+// ignore_for_file: body_might_complete_normally_nullable
+
 class SignUpValidatorHelper {
 
   String? usernameValidator(String? username) {
@@ -30,6 +32,7 @@ class SignUpValidatorHelper {
 
     }
 
+    // ignore: unused_element
     String? passwordValidator(String? password) {
       if (RegExp(
           r'^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[!@#\$&*~]).{8,}$')

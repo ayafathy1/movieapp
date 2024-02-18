@@ -1,14 +1,15 @@
-import 'package:flutter/cupertino.dart';
+
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:movieapp/UI/Screens/Edit%20Profile/controller/edit_profile_controller.dart';
 import 'package:movieapp/UI/Screens/Profile%20Screen/profile_screen.dart';
 import 'package:movieapp/Widgets/custom_elevated_button_widget.dart';
 import 'package:movieapp/Widgets/custom_text_form_field_widget.dart';
 
-import '../Welcome Screen/welcome_screen.dart';
 
+// ignore: use_key_in_widget_constructors
 class EditProfile extends StatelessWidget{
   @override
   Widget build(BuildContext context) {

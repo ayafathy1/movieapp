@@ -1,8 +1,7 @@
-import 'package:flutter/cupertino.dart';
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
-import 'package:get/get_state_manager/src/simple/get_state.dart';
 import 'package:movieapp/UI/Screens/Login%20Screen/login_screen.dart';
 import 'package:movieapp/Widgets/custom_elevated_button_widget.dart';
 import '../../../Widgets/custom_text_field_widget.dart';

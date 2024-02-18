@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:movieapp/UI/Screens/Sign%20up/controller/sign_up_controller.dart';
@@ -5,6 +7,7 @@ import 'package:movieapp/Widgets/custom_elevated_button_widget.dart';
 import '../../Profile Screen/profile_screen.dart';
 import 'Input_field.dart';
 
+// ignore: use_key_in_widget_constructors
 class InputWrapper extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

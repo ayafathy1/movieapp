@@ -4,9 +4,12 @@ import 'package:get/get.dart';
 import 'package:movieapp/UI/Screens/home%20screen/home%20screen%20controller/home_screen_controller.dart';
 
 
+// ignore: must_be_immutable
 class BoxImage extends StatelessWidget{
+  // ignore: non_constant_identifier_names, use_key_in_widget_constructors
   BoxImage( {Key?Key , required this.listview , required this.index});
   int index;
+  // ignore: prefer_typing_uninitialized_variables
   var listview;
   @override
   Widget build(BuildContext context) {
@@ -17,6 +20,7 @@ class BoxImage extends StatelessWidget{
 
 
       return Padding(
+      // ignore: prefer_const_constructors
       padding: EdgeInsets.all(10),
       child: Container(
         decoration: BoxDecoration(

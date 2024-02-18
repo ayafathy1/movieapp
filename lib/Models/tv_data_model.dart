@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_if_null_operators, prefer_null_aware_operators
+
 import 'dart:convert';
 
 TvDataModel tvDataModelFromJson(String str) {
@@ -23,10 +25,15 @@ class TvDataModel {
     this.totalResults,
   });
 
+  // ignore: unnecessary_new
   factory TvDataModel.fromJson(Map<String, dynamic> json) => new TvDataModel(
+
     page: json["page"] == null ? null : json["page"],
+    // ignore: unnecessary_new
     results: json["results"] == null ? null : new List<Result>.from(json["results"].map((x) => Result.fromJson(x))),
+
     totalPages: json["total_pages"] == null ? null : json["total_pages"],
+
     totalResults: json["total_results"] == null ? null : json["total_results"],
   );
 
@@ -71,11 +78,14 @@ class Result {
     this.voteCount,
   });
 
+  // ignore: unnecessary_new
   factory Result.fromJson(Map<String, dynamic> json) => new Result(
     adult: json["adult"] == null ? null : json["adult"],
     backdropPath: json["backdrop_path"] == null ? null : json["backdrop_path"],
+    // ignore: unnecessary_new
     genreIds: json["genre_ids"] == null ? null : new List<int>.from(json["genre_ids"].map((x) => x)),
     id: json["id"] == null ? null : json["id"],
+    // ignore: unnecessary_new
     originCountry: json["origin_country"] == null ? null : new List<String>.from(json["origin_country"].map((x) => x)),
     originalLanguage: json["original_language"] == null ? null : json["original_language"],
     originalName: json["original_name"] == null ? null : json["original_name"],
