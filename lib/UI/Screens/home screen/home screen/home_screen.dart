@@ -91,11 +91,12 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
             // ignore: sized_box_for_whitespace
-            Container(
+            controller.isDataEmpty?Container():Container(
               height: 200,
               child: ListView.separated(
                 shrinkWrap: true,
                 scrollDirection: Axis.horizontal,
+                //itemcount:controller.movie?.results?.length??0
                 itemCount: listview.length,
                 itemBuilder: (BuildContext context, int index) {
                   return BoxImage(
@@ -132,7 +133,7 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
             // ignore: sized_box_for_whitespace
-            Container(
+            controller.isDataEmpty?Container():Container(
               height: 200,
               child: ListView.separated(
                 shrinkWrap: true,
