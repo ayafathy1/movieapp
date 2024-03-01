@@ -10,10 +10,19 @@ class TvServices{
 
   static Future<TvDataModel?>getTvData()async{
 
-    dynamic data = apiService.request(Services.tvEndPoint, Services.tvMethod ,
-        // el headers 3obara 3n map(key and value)
-        hedears:Services.tvHeaders
-    );
+    Map <String , dynamic> body = {
+      "Accept" : "application/json",
+      "authorization" :  "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJjOTQ5YTBlMDliMDZmYmM4N2NhY2ZiZWY0YzUwNDk2MyIsInN1YiI6IjYwNjczMjU2OTQwOGVjMDA3OGFhZDU3OSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.Cc6geu9ql9U2MkchIXPko0pu8_GpNFZGHjp00kjz5I4",
+
+    };
+
+    dynamic data = await Dio().get(
+        "https://api.themoviedb.org/3/discover/tv/${Services.movieEndPoint}",
+        options: Options(
+          // el headers 3obara 3n map(key and value)
+          headers: body,
+        )
+    ) ;
 
     if (data != null){
       return TvDataModel.fromJson(data);

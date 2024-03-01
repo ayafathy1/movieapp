@@ -9,7 +9,7 @@ import 'package:movieapp/Services/tv_services/tv_services.dart';
 
 
 class HomeScreenController extends GetxController{
-   TvDataModel? data ;
+  TvDataModel? data ;
   bool isLoading = true;
   bool isDataEmpty = true;
   @override
@@ -22,13 +22,13 @@ class HomeScreenController extends GetxController{
   void MovieData() async{
     isLoading = true;
     update();
-    MovieDataModel? data = await MovieServices.getMovieData();
-    if (data== null){
+    MovieDataModel? Moviedata = await MovieServices.getMovieData();
+    if (Moviedata== null){
       isDataEmpty = true;
       update();
       print("Error has been happen");
     }else{
-      print(data?.results?[0]);
+      print(Moviedata?.results?[0]);
     }isLoading= false;
     update();
   }
@@ -37,13 +37,13 @@ class HomeScreenController extends GetxController{
   void TvData() async{
     isLoading = true;
     update();
-    TvDataModel? data = await TvServices.getTvData();
-    if (data== null){
+    TvDataModel? Tvdata = await TvServices.getTvData();
+    if (Tvdata== null){
       isDataEmpty = true;
       update();
       print("Error has been happen");
     }else{
-      print(data?.results?[0]);
+      print(Tvdata?.results?[0]);
     }
     isLoading = false;
     update();

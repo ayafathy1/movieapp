@@ -89,9 +89,73 @@ class TvScreen extends StatelessWidget {
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: ListView.builder(
-                              itemCount: listview.length,
-                              itemBuilder: (_, index) {
-                                return Box2(listview: listview, index: index,);
+                              itemCount: controller.data?.results?.length??0,
+                              itemBuilder: (context, index) {
+                                return  Padding(
+                                  padding: const EdgeInsets.all(20),
+                                  child: Container(
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(16),
+
+                                    ),
+                                    height:Get.height*0.2,
+                                    width: Get.width*0.2,
+                                    child: SingleChildScrollView(
+                                      scrollDirection: Axis.horizontal,
+                                      child: Row(
+                                        children: [
+                                          ClipRRect(
+                                            borderRadius: const BorderRadius.only(topLeft: Radius.circular(16),
+                                                bottomLeft: Radius.circular(16)),
+                                            child: Image(
+                                              height: 190,
+                                              width: 100,
+                                              image:
+                                              NetworkImage("https://media.themoviedb.org/t/p/w220_and_h330_face${controller.data?.results?[index].posterPath??""}"),
+                                              fit: BoxFit.cover,),
+                                          ),
+                                          Column(
+                                            children: [
+                                              Row(
+                                                children: [
+
+                                                  Text(controller.data?.results?[index].originalName??"", style: const TextStyle(color: Colors
+                                                      .black , fontSize: 20,
+                                                      fontWeight: FontWeight.bold),),
+                                                  const SizedBox(height: 40, width: 130,),
+                                                ],
+                                              ),
+
+                                              Row(
+                                                children: [
+                                                  Text(controller.data?.results?[index].firstAirDate??"", style: const TextStyle(color: Colors.black,
+                                                  ),),
+                                                  const SizedBox(width: 170,)
+                                                ],
+                                              ),
+                                              const SizedBox(height: 5,),
+                                              Row(
+                                                children: [
+                                                  //genere
+                                                  Text(controller.data?.results?[index].backdropPath??"", style: const TextStyle(color: Colors
+                                                      .black),),
+                                                ],
+                                              ),
+                                              const SizedBox(height: 20,),
+                                              const Row(
+                                                children: [
+                                                  Image(image: AssetImage("assets/images/Watch list.png")),
+                                                  SizedBox(width: 90,)
+                                                ],
+                                              )
+
+                                            ],
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                );
                               }
                           ),
                         ),

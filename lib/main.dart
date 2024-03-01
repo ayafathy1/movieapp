@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:movieapp/UI/Screens/home%20screen/home%20screen/home_screen.dart';
+import 'package:movieapp/UI/Screens/movie_screen/movie_screen.dart';
+import 'package:movieapp/UI/Screens/tv_screen/tv_screen.dart';
 import 'firebase_options.dart';
 import 'UI/Screens/Splash Screen/splash_screen.dart';
 
@@ -21,7 +24,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
         debugShowCheckedModeBanner: false,
         color: Colors.transparent,
-        home: SplashScreen()
+        home: HomeScreen()
     );
   }
 }
