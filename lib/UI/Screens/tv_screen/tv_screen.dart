@@ -89,6 +89,8 @@ class TvScreen extends StatelessWidget {
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: ListView.builder(
+                            physics: AlwaysScrollableScrollPhysics(),
+                              controller: controller.TvScrollController,
                               itemCount: controller.data?.results?.length??0,
                               itemBuilder: (context, index) {
                                 return  Padding(

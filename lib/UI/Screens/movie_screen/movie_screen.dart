@@ -92,6 +92,8 @@ class MovieScreen extends StatelessWidget{
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: ListView.builder(
+                            physics: AlwaysScrollableScrollPhysics(),
+                              controller: controller.movieScrollController,
                               itemCount: controller.data?.results?.length,
                               itemBuilder: (context, index) {
                                 return  Padding(

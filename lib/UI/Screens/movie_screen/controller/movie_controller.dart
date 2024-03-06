@@ -2,6 +2,7 @@
 
 import 'dart:async';
 
+import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/src/simple/get_controllers.dart';
 import '../../../../Models/movie_data_model.dart';
 import '../../../../Services/movie_services/movie_services.dart';
@@ -15,6 +16,7 @@ class MoviesController extends GetxController{
 
   late MovieDataModel? data ;
    bool isLoading = true;
+   ScrollController movieScrollController = ScrollController();
    // ignore: annotate_overrides
    onInit()  {
      super.onInit();

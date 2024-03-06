@@ -1,5 +1,6 @@
 // ignore_for_file: avoid_print
 
+import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/src/simple/get_controllers.dart';
 
 import '../../../../Models/tv_data_model.dart';
@@ -10,6 +11,7 @@ class TvController extends GetxController{
 
   late TvDataModel? data ;
   bool isLoading = true;
+  ScrollController TvScrollController = ScrollController();
   @override
   onInit()  {
     super.onInit();
